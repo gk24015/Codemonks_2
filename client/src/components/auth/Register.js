@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import register from "./register.svg";
 
 class Register extends Component {
   constructor() {
@@ -54,15 +55,15 @@ class Register extends Component {
 
     return (
       <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
+        <div className="row" style={{marginTop:"4rem"}}>
+          <div className="col s7">
+            <Link to="/" className="btn-flat waves-effect" style={{color:"white"}}>
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Register</b> below
+                <b>Register!</b>
               </h4>
               <p className="grey-text text-darken-1">
                 Already have an account? <Link to="/login">Log in</Link>
@@ -76,6 +77,7 @@ class Register extends Component {
                   error={errors.name}
                   id="name"
                   type="text"
+                  style={{color:"white"}}
                   className={classnames("", {
                     invalid: errors.name
                   })}
@@ -90,6 +92,7 @@ class Register extends Component {
                   error={errors.email}
                   id="email"
                   type="email"
+                  style={{color:"white"}}
                   className={classnames("", {
                     invalid: errors.email
                   })}
@@ -104,6 +107,7 @@ class Register extends Component {
                   error={errors.password}
                   id="password"
                   type="password"
+                  style={{color:"white"}}
                   className={classnames("", {
                     invalid: errors.password
                   })}
@@ -118,6 +122,7 @@ class Register extends Component {
                   error={errors.password2}
                   id="password2"
                   type="password"
+                  style={{color:"white"}}
                   className={classnames("", {
                     invalid: errors.password2
                   })}
@@ -134,13 +139,17 @@ class Register extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable accent-3"
+                  style={{background:"##00BFA6"}}
                 >
                   Sign up
                 </button>
               </div>
             </form>
           </div>
+          <div className="col s3">
+          <img src={register} alt="register" width="450px" style={{marginLeft:"30px", marginTop:"100px"}}/>
+        </div>
         </div>
       </div>
     );
