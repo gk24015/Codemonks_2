@@ -13,7 +13,7 @@ class Dashboard extends Component {
     return (
       <div>
         <Nav />
-      <div className="container" style={{marginTop:"4rem"}}>
+      <div className="container" style={{marginTop:"2rem"}}>
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <h4>
@@ -22,13 +22,14 @@ class Dashboard extends Component {
                 Welcome to your {" "}
                 <span style={{ fontFamily: "monospace" }}>CODEMONKS</span> Dashboard
               </p>
+            
               <p className="flow-text grey-text text-darken-1">
-                Let's Make your First Pen!
+                Let's Make your First Project!
               </p>
             </h4>
             <p>
             <Link
-                to="/userpen"
+                to="/newproject"
                 style={{
                   width: "450px",
                   borderRadius: "3px",
@@ -36,7 +37,7 @@ class Dashboard extends Component {
                 }}
                 className="btn btn-large waves-effect waves-light hoverable accent-3"
               >
-                Make a Pen!
+                Make a Project!
               </Link>
             </p>
             <img src={dashboard} alt="dashboard" width="400px" />
