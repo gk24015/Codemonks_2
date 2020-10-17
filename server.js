@@ -33,6 +33,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/api/posts/",require("./routes/api/posts"));
 
 const port = process.env.PORT || 5000;
 

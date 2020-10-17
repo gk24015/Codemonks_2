@@ -1,4 +1,3 @@
-  
 var mongoose = require("mongoose");
 var postSchema = new mongoose.Schema({
     title: {
@@ -20,4 +19,4 @@ var postSchema = new mongoose.Schema({
 
 });
 
-module.exports= mongoose.model("posts",postSchema);
+module.exports= mongoose.model("posts",postSchema);\

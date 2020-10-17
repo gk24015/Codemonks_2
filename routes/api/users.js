@@ -83,7 +83,8 @@ router.post("/login", (req, res) => {
           name: user.name
         };
 
-        // Sign token
+        // Sign token // assigning a jwt token that we 
+        //check in passport.js
         jwt.sign(
           payload,
           keys.secretOrKey,
