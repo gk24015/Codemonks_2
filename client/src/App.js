@@ -13,6 +13,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import PenPage from "./components/userPenPage/componentsPenPage/App";
+import NewProject from "./components/newProject/NewProject";
 
 import "./App.css";
 
@@ -47,6 +48,7 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/userpen" component={PenPage} />
+              <PrivateRoute exact path="/newproject" component={NewProject} />
             </Switch>
           </div>
         </Router>
